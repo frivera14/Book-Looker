@@ -9,7 +9,7 @@ import { removeBookId } from '../utils/localStorage';
 const SavedBooks = () => {
   const { loading, data } = useQuery(GET_ME)
 
-  const userData = data?.me || {}
+  const userData = data?.me || data?.user || {}
 
   const [deleteBook] = useMutation(REMOVE_BOOK);
 
